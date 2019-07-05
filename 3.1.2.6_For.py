@@ -7,4 +7,15 @@ for i in range(1,5):
     print('Mississippi')
     time.sleep(1)
 
-# Write a print function with the final message.
+# More examples
+
+pow = 1
+for exp in range(16):
+    print("2 to the power of", exp, "is", pow)
+    pow *= 2
+
+for i in range(3):
+    print(i, end=" ") # outputs: 0 1 2
+
+for i in range(6, 1, -2):
+    print(i, end=" ") # outputs: 6, 4, 2

@@ -24,8 +24,6 @@ else:
     print("else:", i)
 
 The while's condition is False at the beginning - can you see it?
-
-Run and test the program, and check whether the else branch has been executed or not.
 '''
 i = 1
 while i < 5:

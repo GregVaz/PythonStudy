@@ -1,4 +1,6 @@
-﻿print("    *")
+﻿# Impresion de pantalla
+
+print("    *")
 print("   * *")
 print("  *   *")
 print(" *     *")
