@@ -42,7 +42,11 @@ def EnterMove(board):
     #
     selection = True
     while selection:
-        move = int(input("Ingresa tu movimiento del tablero con el numero de una casilla vacia: "))
+        try:
+            move = int(input("Ingresa tu movimiento del tablero con el numero de una casilla vacia: "))
+        except:
+            print("Ingresa un numero de posicion por favor")
+            continue
         if move < 1 or move > 9:
             continue
         if move not in MakeListOfFreeFields(board):

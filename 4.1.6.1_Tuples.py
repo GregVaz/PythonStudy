@@ -65,7 +65,7 @@ print(myTuple)
 myList = [1, 2, True, "a string", (3, 4), [5, 6], None]
 print(myList)
 
-Each tuple element may be of a different type (i.e., integers, strings, booleans, etc.). What is more, tuples can contain other tuples or lists (and the other way round).
+# Each tuple element may be of a different type (i.e., integers, strings, booleans, etc.). What is more, tuples can contain other tuples or lists (and the other way round).
 
 '''
 2. You can create an empty tuple like this:
