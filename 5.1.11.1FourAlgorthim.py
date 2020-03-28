@@ -51,7 +51,7 @@ except:
 
 
 
-The IBAN Validator
+#The IBAN Validator
 '''
 The fourth program implements (in a slightly simplified form) an algorithm used by European banks to specify account numbers. The standard named IBAN (International Bank Account Number) provides a simple and fairly reliable method of validating the account numbers against simple typos that can occur during rewriting of the number e.g., from paper documents, like invoices or bills, into computers.
 

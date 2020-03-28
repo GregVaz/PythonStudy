@@ -49,7 +49,8 @@ print(sun) # Sun in Milky Way
 
 # Inheritance
 '''
-The term inheritance is older than computer programming, and it describes the common practice of passing different goods from one person to another upon that person's death. The term, when related to computer programming, has an entirely different meaning.
+The term inheritance is older than computer programming, and it describes the common practice of passing different goods from one person to another upon that person's death. 
+The term, when related to computer programming, has an entirely different meaning.
 
 The concept of inheritance
 
@@ -58,13 +59,15 @@ Let's define the term for our purposes:
 
 Inheritance is a common practice (in object programming) of passing attributes and methods from the superclass (defined and existing) to a newly created class, called the subclass.
 
-In other words, inheritance is a way of building a new class, not from scratch, but by using an already defined repertoire of traits. The new class inherits (and this is the key) all the already existing equipment, but is able to add some new ones if needed.
+In other words, inheritance is a way of building a new class, not from scratch, but by using an already defined repertoire of traits. The new class inherits (and this is the key) all 
+the already existing equipment, but is able to add some new ones if needed.
 
 Thanks to that, it's possible to build more specialized (more concrete) classes using some sets of predefined general rules and behaviors.
 
 
 
-The most important factor of the process is the relation between the superclass and all of its subclasses (note: if B is a subclass of A and C is a subclass of B, this also means than C is a subclass of A, as the relationship is fully transitive).
+The most important factor of the process is the relation between the superclass and all of its subclasses (note: if B is a subclass of A and C is a subclass of B, 
+this also means than C is a subclass of A, as the relationship is fully transitive).
 
 A very simple example of two-level inheritance is presented here:
 class Vehicle:
@@ -139,7 +142,8 @@ As you already know, an object is an incarnation of a class. This means that the
 
 This can generate some important issues.
 
-Let's assume that you've got a cake (e.g., as an argument passed to your function). You want to know what recipe has been used to make it. Why? Because you want to know what to expect from it, e.g., whether it contains nuts or not, which is crucial information to some people.
+Let's assume that you've got a cake (e.g., as an argument passed to your function). You want to know what recipe has been used to make it. Why? Because you want to know what to expect from it, 
+e.g., whether it contains nuts or not, which is crucial information to some people.
 
 Similarly, it can be crucial if the object does have (or doesn't have) certain characteristics. In other words, whether it is an object of a certain class or not.
 
@@ -150,7 +154,8 @@ The functions returns True if the object is an instance of the class, or False o
 
 Being an instance of a class means that the object (the cake) has been prepared using a recipe contained in either the class or one of its superclasses.
 
-Don't forget: if a subclass contains at least the same equipment as any of its superclasses, it means that objects of the subclass can do the same as objects derived from the superclass, ergo, it's an instance of its home class and any of its superclasses.
+Don't forget: if a subclass contains at least the same equipment as any of its superclasses, it means that objects of the subclass can do the same as objects derived from the superclass, 
+ergo, it's an instance of its home class and any of its superclasses.
 '''
 
 class Vehicle:
@@ -347,7 +352,8 @@ When you try to access any object's entity, Python will try to (in this order):
 
 If both of the above fail, an exception (AttributeError) is raised.
 
-The first condition may need some additional attention. As you know, all objects deriving from a particular class may have different sets of attributes, and some of the attributes may be added to the object a long time after the object's creation.
+The first condition may need some additional attention. As you know, all objects deriving from a particular class may have different sets of attributes, and some of the attributes may be added to the 
+object a long time after the object's creation.
 
 The example in the editor summarizes this in a three-level inheritance line. Analyze it carefully.
 
@@ -571,11 +577,15 @@ class WheeledVehicle:
 '''
 Look at the code in the editor again. This is what we've done:
 
-    we defined a superclass named Vehicle, which uses the turn() method to implement a general scheme of turning, while the turning itself is done by a method named changedirection(); note: the former method is empty, as we are going to put all the details into the subclass (such a method is often called an abstract method, as it only demonstrates some possibility which will be instantiated later)
+    we defined a superclass named Vehicle, which uses the turn() method to implement a general scheme of turning, while the turning itself is done by a method named changedirection(); 
+    note: the former method is empty, as we are going to put all the details into the subclass 
+    (such a method is often called an abstract method, as it only demonstrates some possibility which will be instantiated later)
+
     we defined a subclass named TrackedVehicle (note: it's derived from the Vehicle class) which instantiated the changedirection() method by using the specific (concrete) method named controltrack()
     respectively, the subclass named WheeledVehicle does the same trick, but uses the turnfrontwheel() method to force the vehicle to turn.
 
-The most important advantage (omitting readability issues) is that this form of code enables you to implement a brand new turning algorithm just by modifying the turn() method, which can be done in just one place, as all the vehicles will obey it.
+The most important advantage (omitting readability issues) is that this form of code enables you to implement a brand new turning algorithm just by modifying the turn() method, 
+which can be done in just one place, as all the vehicles will obey it.
 
 This is how polymorphism helps the developer to keep the code clean and consistent.
 '''
@@ -612,20 +622,25 @@ class WheeledVehicle(Vehicle):
 '''
 Inheritance is not the only way of constructing adaptable classes. You can achieve the same goals (not always, but very often) by using a technique named composition.
 
-Composition is the process of composing an object using other different objects. The objects used in the composition deliver a set of desired traits (properties and/or methods) so we can say that they act like blocks used to build a more complicated structure.
+Composition is the process of composing an object using other different objects. The objects used in the composition deliver a set of desired traits (properties and/or methods) 
+so we can say that they act like blocks used to build a more complicated structure.
 
 It can be said that:
 
-    inheritance extends a class's capabilities by adding new components and modifying existing ones; in other words, the complete recipe is contained inside the class itself and all its ancestors; the object takes all the class's belongings and makes use of them;
+    inheritance extends a class's capabilities by adding new components and modifying existing ones; in other words, the complete recipe is contained inside the class itself and all 
+    its ancestors; the object takes all the class's belongings and makes use of them;
     composition projects a class as a container able to store and use other objects (derived from other classes) where each of the objects implements a part of a desired class's behavior.
 
 
-The subclasses implemented this ability by introducing specialized mechanisms. Let's do (almost) the same thing, but using composition. The class - like in the previous example - is aware of how to turn the vehicle, but the actual turn is done by a specialized object stored in a property named controller. The controller is able to control the vehicle by manipulating the relevant vehicle's parts.
+The subclasses implemented this ability by introducing specialized mechanisms. Let's do (almost) the same thing, but using composition. The class - like in the previous example - is aware of 
+how to turn the vehicle, but the actual turn is done by a specialized object stored in a property named controller. The controller is able to control the vehicle by manipulating the relevant vehicle's parts.
 
-Let us illustrate the difference by using the previously defined vehicles. The previous approach led us to a hierarchy of classes in which the top-most class was aware of the general rules used in turning the vehicle, but didn't know how to control the appropriate components (wheels or tracks).
+Let us illustrate the difference by using the previously defined vehicles. The previous approach led us to a hierarchy of classes in which the top-most class was aware of the general rules 
+used in turning the vehicle, but didn't know how to control the appropriate components (wheels or tracks).
 Take a look into the editor - this is how it could look.
 
-There are two classes named Tracks and Wheels - they know how to control the vehicle's direction. There is also a class named Vehicle which can use any of the available controllers (the two already defined, or any other defined in the future) - the controller itself is passed to the class during initialization.
+There are two classes named Tracks and Wheels - they know how to control the vehicle's direction. There is also a class named Vehicle which can use any of the available controllers (the two 
+already defined, or any other defined in the future) - the controller itself is passed to the class during initialization.
 
 In this way, the vehicle's ability to turn is composed using an external object, not implemented inside the Vehicle class.
 

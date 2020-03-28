@@ -264,12 +264,7 @@ print("[" + "   aleph   ".strip() + "]") # [aleph]
 
 
 # The swapcase() method
-'''print('lambda'.isalnum()) # Trueprint('laprint('lambda'.isalnum()) # True
-print('lambda'.isalnum()) # True
-print('lambda'.isalnum()) # True
-mbda'.isalnum()) # True
-
-
+'''
 The swapcase() method makes a new string by swapping the case of all letters within the source string: lower-case characters become upper-case, and vice versa.
 '''
 print("I know that I know nothing.".swapcase()) # i KNOW THAT i KNOW NOTHING.

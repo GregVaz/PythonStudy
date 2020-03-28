@@ -28,4 +28,7 @@ def printNumbers(arg):
     }
     return dictionary[arg]
 
-display("120908")
+try:
+    display(input("Ingresa un numero: "))
+except:
+    print("Error: ingresa unicamente numeros") 
